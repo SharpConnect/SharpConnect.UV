@@ -1,4 +1,4 @@
-# SharpConnect.IO
+# SharpConnect.UV
 IO with libUV 1.9
 
 license: MIT
