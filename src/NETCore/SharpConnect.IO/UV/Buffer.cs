@@ -1,6 +1,5 @@
 ﻿//MIT, https://github.com/dotnet/corefxlab
-using System;
-using System.Buffers;
+using System; 
 using System.Runtime.InteropServices;
 using System.Net.Libuv.Internal;
 namespace System.Net.Libuv

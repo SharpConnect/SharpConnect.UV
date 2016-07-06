@@ -4,7 +4,7 @@ using System.Text;
 using System.Net.Libuv;
 namespace TestApp01
 {
-     
+
     static class Program
     {
         /// <summary>
@@ -13,6 +13,9 @@ namespace TestApp01
         [STAThread]
         static void Main()
         {
+            //--------------------------------------------------------
+            Console.WriteLine("SharpConnect.IO says : hello!");
+            //--------------------------------------------------------
             UVLoop uvLoop = new UVLoop();
             TcpListener tcpListener = new TcpListener("127.0.0.1", 8080, uvLoop);
             tcpListener.ConnectionAccepted += (Tcp newIncommingConn) =>
@@ -30,9 +33,7 @@ namespace TestApp01
                             copyData, 0, dataLen
                             );
                         req = System.Text.Encoding.UTF8.GetString(copyData);
-                    }
-
-
+                    } 
                     //--------------------------------------------------------
                     StringBuilder stbuilder = new StringBuilder();
                     stbuilder.Append("OK-12345");

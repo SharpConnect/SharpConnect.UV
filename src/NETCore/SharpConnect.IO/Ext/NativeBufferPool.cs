@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace System.Buffers
+namespace System.Net.Libuv.Internal
 {   
     class NativeBufferPool : IDisposable
     {

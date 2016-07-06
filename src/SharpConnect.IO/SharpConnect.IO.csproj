@@ -31,18 +31,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\NETCore\SharpConnect.IO\Ext\NativeBufferPool.cs">
+      <Link>ForNet20\NativeBufferPool.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\Ext\Span.cs">
+      <Link>ForNet20\Span.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Buffer.cs">
+      <Link>UV\Buffer.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Error.cs">
+      <Link>UV\Error.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Handle.cs">
+      <Link>UV\Handle.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Interop.cs">
+      <Link>UV\Interop.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Listener.cs">
+      <Link>UV\Listener.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Loop.cs">
+      <Link>UV\Loop.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Request.cs">
+      <Link>UV\Request.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Stream.cs">
+      <Link>UV\Stream.cs</Link>
+    </Compile>
+    <Compile Include="..\NETCore\SharpConnect.IO\UV\Tcp.cs">
+      <Link>UV\Tcp.cs</Link>
+    </Compile>
     <Compile Include="ForNet20\ForNet20.cs" />
-    <Compile Include="ForNet20\NativeBufferPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UV\Buffer.cs" />
-    <Compile Include="UV\Error.cs" />
-    <Compile Include="UV\Handle.cs" />
-    <Compile Include="UV\Interop.cs" />
-    <Compile Include="UV\Listener.cs" />
-    <Compile Include="UV\Loop.cs" />
-    <Compile Include="UV\Request.cs" />
-    <Compile Include="UV\Stream.cs" />
-    <Compile Include="UV\Tcp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
