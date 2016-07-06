@@ -127,6 +127,30 @@ namespace System.Net.Libuv.Internal
         public delegate void close_callback(IntPtr handle);
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate void handle_callback(IntPtr req, int status);
+
+        //========================================================================
+        //timer
+        //========================================================================
+        [DllImport(LIBUV, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int uv_timer_init(IntPtr loop, IntPtr timer);
+
+        [DllImport(LIBUV, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int uv_timer_start(IntPtr timer, handle_callback callback, ulong timeout, ulong repeat);
+
+        [DllImport(LIBUV, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int uv_timer_stop(IntPtr timer);
+
+        [DllImport(LIBUV, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int uv_timer_again(IntPtr timer);
+
+        [DllImport(LIBUV, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void uv_timer_set_repeat(IntPtr timer, ulong repeat);
+
+        [DllImport(LIBUV, CallingConvention = CallingConvention.Cdecl)]
+        public static extern ulong uv_timer_get_repeat(IntPtr timer);
+        //---------------------------------------------------------------
+
+
     }
 
     [StructLayout(LayoutKind.Sequential, Size = 16)]
