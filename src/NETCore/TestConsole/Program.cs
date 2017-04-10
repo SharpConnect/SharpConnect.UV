@@ -1,4 +1,4 @@
-﻿//MIT,2016, EngineKit
+﻿//MIT, 2016-2017, EngineKit
 using System;
 using System.Text;
 using System.Net.Libuv;
@@ -33,7 +33,7 @@ namespace TestApp01
                             copyData, 0, dataLen
                             );
                         req = System.Text.Encoding.UTF8.GetString(copyData);
-                    } 
+                    }
                     //--------------------------------------------------------
                     StringBuilder stbuilder = new StringBuilder();
                     stbuilder.Append("OK-12345");
@@ -45,9 +45,11 @@ namespace TestApp01
                 newIncommingConn.ReadStart();
             };
             tcpListener.Listen(); //start listening
-            uvLoop.Run(); //server wait for new incomming connection
-                          //-----------
-                          //try test by call http://127.0.0.1:8080 from web browser
+            uvLoop.Run();
+
+            //server wait for new incomming connection
+            //-----------
+            //try test by call http://127.0.0.1:8080 from web browser
             uvLoop.Stop();
         }
 
