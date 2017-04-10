@@ -1,4 +1,4 @@
-﻿//MIT,2016, EngineKit
+﻿//MIT, 2016-2017, EngineKit
 //modified from https://github.com/dotnet/corefxlab
 
 using System.Collections.Generic;
